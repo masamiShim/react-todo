@@ -10,11 +10,11 @@ export default class TodoCreator extends React.Component {
             hasError: false
         };
 
-        this.handelChange = this.handelKeyUp.bind(this);
-        this.handelKeyUp = this.handelKeyUp.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleKeyUp = this.handleKeyUp.bind(this);
     }
 
-    hadleChange(e) {
+    handleChange(e) {
         this.setState({
             val: e.target.value
         })
@@ -48,7 +48,7 @@ export default class TodoCreator extends React.Component {
             <div className="form">
                 <div className="inputArea">
                     <input type="text" className="inputText" value={this.state.val}
-                           onChange={this.handelChange} onKeyUp={this.handelKeyUp} placeholder="something todo input"/>
+                           onChange={this.handleChange} onKeyUp={this.handleKeyUp} placeholder="something todo input"/>
                     {errMsg}
                 </div>
             </div>
